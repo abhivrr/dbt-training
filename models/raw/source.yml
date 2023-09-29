@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+ - name: globalmart
+   database: raw
+   schema: globalmart
+   tables:
+    - name: customer
+      identifier: raw_customers
+
+    - name: products
+      identifier: raw_products
+
+    - name: orders
+      identifier: raw_orders    
