@@ -5,11 +5,15 @@ sources:
    database: raw
    schema: globalmart
    tables:
-    - name: customer
+    - name: customers
       identifier: raw_customers
 
     - name: products
       identifier: raw_products
+      loaded_at_field: loadedat
+      freshness:
+        warn_after: {count: 1, period: minute }
+        error_after: { count: 2, period: minute }
 
     - name: orders
       identifier: raw_orders    

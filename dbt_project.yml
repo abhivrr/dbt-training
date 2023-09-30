@@ -39,4 +39,6 @@ models:
     reporting:
       +materialized: table
     stg:
-      +materialized: view  
+      +materialized: view
+    src:
+      +materialized: view    
